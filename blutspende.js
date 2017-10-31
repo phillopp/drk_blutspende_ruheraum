@@ -5,7 +5,7 @@ var delay = 1000;
 var erstspender = parseInt(getCookie("erstspender"));
 var bett = parseInt(getCookie("bett"));
 var stuhl = parseInt(getCookie("stuhl"));
-var ortsverein = "Ortsverein Schorndorf";
+var ortsverein = "__NAME IHRES ORTSVERIENS__";
 var datum = getCookie("datum");
 var ort = getCookie("ort");
 
