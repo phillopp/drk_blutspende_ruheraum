@@ -1,0 +1,302 @@
+<!doctype html>
+<HTML>
+  <head>
+    <title>Ruheraum Blutspende</title>
+    <script type="text/javascript" src="blutspende.js"></script>
+    <link rel="stylesheet" href="style.css" media="screen">
+    <link rel="stylesheet" href="print.css" type="text/css" media="print">
+  </head>
+  <body onunload="verlassen();" onload="loadCookies();">
+    <div class="kopfzeile">
+      <svg height="60" width="220">
+        <polygon points="20,0 40,0 40,20 60,20 60,40 40,40 40,60 20,60 20,40 0,40 0,20 20,20" style="fill:#E60005" />
+        <text x="75" y="20" fill="black">Deutsches</text>
+        <text x="75" y="40" fill="black">Rotes</text>
+        <text x="75" y="60">Kreuz</text>
+        Sorry, your browser does not support inline SVG.
+      </svg>
+      <span id="ortsverein">Ortsverein Schorndorf<br>Blutspende</span>
+    </div>
+    <div class="ruheraum">
+      <div class="bettenbereich">
+        <div class="bett">
+          <h1>Bett 1</h1>
+          <p type="text" class="timer start" id="bett1"></p>
+          <img src="fertig.gif">
+          <button onclick="InitializeTimer('bett','bett1')" class="standard">Start</button>
+          <button onclick="InitializeTimer('erstspender','bett1')" class="standard">Erstspender</button>
+          <button onclick="aufstehen('bett1');" class="aufstehen">aufstehen</button>
+          <button onclick="abbruch('bett1');" class="abbrechen">abbrechen</button>
+        </div>
+        <div class="bett">
+          <h1>Bett 2</h1>
+          <p type="text" class="timer start" id="bett2"></p>
+          <img src="fertig.gif">
+          <button onclick="InitializeTimer('bett','bett2')" class="standard">Start</button>
+          <button onclick="InitializeTimer('erstspender','bett2')" class="standard">Erstspender</button>
+          <button onclick="aufstehen('bett2');" class="aufstehen">aufstehen</button>
+          <button onclick="abbruch('bett2');" class="abbrechen">abbrechen</button>
+        </div>
+        <div class="bett">
+          <h1>Bett 3</h1>
+          <p type="text" class="timer start" id="bett3"></p>
+          <img src="fertig.gif">
+          <button onclick="InitializeTimer('bett','bett3')" class="standard">Start</button>
+          <button onclick="InitializeTimer('erstspender','bett3')" class="standard">Erstspender</button>
+          <button onclick="aufstehen('bett3');" class="aufstehen">aufstehen</button>
+          <button onclick="abbruch('bett3');" class="abbrechen">abbrechen</button>
+        </div>
+        <div class="bett">
+          <h1>Bett 4</h1>
+          <p type="text" class="timer start" id="bett4"></p>
+          <img src="fertig.gif">
+          <button onclick="InitializeTimer('bett','bett4')" class="standard">Start</button>
+          <button onclick="InitializeTimer('erstspender','bett4')" class="standard">Erstspender</button>
+          <button onclick="aufstehen('bett4');" class="aufstehen">aufstehen</button>
+          <button onclick="abbruch('bett4');" class="abbrechen">abbrechen</button>
+        </div>
+        <div class="bett">
+          <h1>Bett 5</h1>
+          <p type="text" class="timer start" id="bett5"></p>
+          <img src="fertig.gif">
+          <button onclick="InitializeTimer('bett','bett5')" class="standard">Start</button>
+          <button onclick="InitializeTimer('erstspender','bett5')" class="standard">Erstspender</button>
+          <button onclick="aufstehen('bett5');" class="aufstehen">aufstehen</button>
+          <button onclick="abbruch('bett5');" class="abbrechen">abbrechen</button>
+        </div>
+        <div class="bett">
+          <h1>Bett 6</h1>
+          <p type="text" class="timer start" id="bett6"></p>
+          <img src="fertig.gif">
+          <button onclick="InitializeTimer('bett','bett6')" class="standard">Start</button>
+          <button onclick="InitializeTimer('erstspender','bett6')" class="standard">Erstspender</button>
+          <button onclick="aufstehen('bett6');" class="aufstehen">aufstehen</button>
+          <button onclick="abbruch('bett6');" class="abbrechen">abbrechen</button>
+        </div>
+        <div class="bett">
+          <h1>Bett 7</h1>
+          <p type="text" class="timer start" id="bett7"></p>
+          <img src="fertig.gif">
+          <button onclick="InitializeTimer('bett','bett7')" class="standard">Start</button>
+          <button onclick="InitializeTimer('erstspender','bett7')" class="standard">Erstspender</button>
+          <button onclick="aufstehen('bett7');" class="aufstehen">aufstehen</button>
+          <button onclick="abbruch('bett7');" class="abbrechen">abbrechen</button>
+        </div>
+        <div class="bett">
+          <h1>Bett 8</h1>
+          <p type="text" class="timer start" id="bett8"></p>
+          <img src="fertig.gif">
+          <button onclick="InitializeTimer('bett','bett8')" class="standard">Start</button>
+          <button onclick="InitializeTimer('erstspender','bett8')" class="standard">Erstspender</button>
+          <button onclick="aufstehen('bett8');" class="aufstehen">aufstehen</button>
+          <button onclick="abbruch('bett8');" class="abbrechen">abbrechen</button>
+        </div>
+      </div>
+      <div class="stuhlbereich">
+        <table>
+          <tr>
+            <td></td>
+            <td>
+              <div class="stuhl">
+                <h1>Stuhl 1</h1>
+                <p type="text" class="timer start" id="stuhl1"></p>
+                <img src="fertig.gif">
+                <button onclick="InitializeTimer('stuhl','stuhl1')" class="standard">Start</button>
+                <button onclick="aufstehen('stuhl1');" class="aufstehen">aufstehen</button>
+                <button onclick="abbruch('stuhl1');" class="abbrechen">abbrechen</button>
+              </div>
+            </td>
+            <td>
+              <div class="stuhl">
+                <h1>Stuhl 2</h1>
+                <p type="text" class="timer start" id="stuhl2"></p>
+                <img src="fertig.gif">
+                <button onclick="InitializeTimer('stuhl','stuhl2')" class="standard">Start</button>
+                <button onclick="aufstehen('stuhl2');" class="aufstehen">aufstehen</button>
+                <button onclick="abbruch('stuhl2');" class="abbrechen">abbrechen</button>
+              </div>
+            </td>
+            <td>
+              <div class="stuhl">
+                <h1>Stuhl 3</h1>
+                <p type="text" class="timer start" id="stuhl3"></p>
+                <img src="fertig.gif">
+                <button onclick="InitializeTimer('stuhl','stuhl3')" class="standard">Start</button>
+                <button onclick="aufstehen('stuhl3');" class="aufstehen">aufstehen</button>
+                <button onclick="abbruch('stuhl3');" class="abbrechen">abbrechen</button>
+              </div>
+            </td>
+            <td>
+              <div class="stuhl">
+                <h1>Stuhl 4</h1>
+                <p type="text" class="timer start" id="stuhl4"></p>
+                <img src="fertig.gif">
+                <button onclick="InitializeTimer('stuhl','stuhl4')" class="standard">Start</button>
+                <button onclick="aufstehen('stuhl4');" class="aufstehen">aufstehen</button>
+                <button onclick="abbruch('stuhl4');" class="abbrechen">abbrechen</button>
+              </div>
+            </td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>
+              <div class="stuhl">
+                <h1>Stuhl 5</h1>
+                <p type="text" class="timer start" id="stuhl5"></p>
+                <img src="fertig.gif">
+                <button onclick="InitializeTimer('stuhl','stuhl5')" class="standard">Start</button>
+                <button onclick="aufstehen('stuhl5');" class="aufstehen">aufstehen</button>
+                <button onclick="abbruch('stuhl5');" class="abbrechen">abbrechen</button>
+              </div>
+            </td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>
+              <div class="stuhl">
+                <h1>Stuhl 6</h1>
+                <p type="text" class="timer start" id="stuhl6"></p>
+                <img src="fertig.gif">
+                <button onclick="InitializeTimer('stuhl','stuhl6')" class="standard">Start</button>
+                <button onclick="aufstehen('stuhl6');" class="aufstehen">aufstehen</button>
+                <button onclick="abbruch('stuhl6');" class="abbrechen">abbrechen</button>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="stuhl">
+                <h1>Stuhl 7</h1>
+                <p type="text" class="timer start" id="stuhl7"></p>
+                <img src="fertig.gif">
+                <button onclick="InitializeTimer('stuhl','stuhl7')" class="standard">Start</button>
+                <button onclick="aufstehen('stuhl7');" class="aufstehen">aufstehen</button>
+                <button onclick="abbruch('stuhl7');" class="abbrechen">abbrechen</button>
+              </div>
+            </td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>
+              <div class="stuhl">
+                <h1>Stuhl 8</h1>
+                <p type="text" class="timer start" id="stuhl8"></p>
+                <img src="fertig.gif">
+                <button onclick="InitializeTimer('stuhl','stuhl8')" class="standard">Start</button>
+                <button onclick="aufstehen('stuhl8');" class="aufstehen">aufstehen</button>
+                <button onclick="abbruch('stuhl8');" class="abbrechen">abbrechen</button>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>
+              <div class="stuhl">
+                <h1>Stuhl 9</h1>
+                <p type="text" class="timer start" id="stuhl9"></p>
+                <img src="fertig.gif">
+                <button onclick="InitializeTimer('stuhl','stuhl9')" class="standard">Start</button>
+                <button onclick="aufstehen('stuhl9');" class="aufstehen">aufstehen</button>
+                <button onclick="abbruch('stuhl9');" class="abbrechen">abbrechen</button>
+              </div>
+            </td>
+            <td>
+              <div class="stuhl">
+                <h1>Stuhl 10</h1>
+                <p type="text" class="timer start" id="stuhl10"></p>
+                <img src="fertig.gif">
+                <button onclick="InitializeTimer('stuhl','stuhl10')" class="standard">Start</button>
+                <button onclick="aufstehen('stuhl10');" class="aufstehen">aufstehen</button>
+                <button onclick="abbruch('stuhl10');" class="abbrechen">abbrechen</button>
+              </div>
+            </td>
+            <td>
+              <div class="stuhl">
+                <h1>Stuhl 11</h1>
+                <p type="text" class="timer start" id="stuhl11"></p>
+                <img src="fertig.gif">
+                <button onclick="InitializeTimer('stuhl','stuhl11')" class="standard">Start</button>
+                <button onclick="aufstehen('stuhl11');" class="aufstehen">aufstehen</button>
+                <button onclick="abbruch('stuhl11');" class="abbrechen">abbrechen</button>
+              </div>
+            </td>
+            <td>
+              <div class="stuhl">
+                <h1>Stuhl 12</h1>
+                <p type="text" class="timer start" id="stuhl12"></p>
+                <img src="fertig.gif">
+                <button onclick="InitializeTimer('stuhl','stuhl12')" class="standard">Start</button>
+                <button onclick="aufstehen('stuhl12');" class="aufstehen">aufstehen</button>
+                <button onclick="abbruch('stuhl12');" class="abbrechen">abbrechen</button>
+              </div>
+            </td>
+            <td></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <div class="statistik">
+      Anzahl der Spender: <span id="spender"></span> | Anzahl der Erstspender: <span id="erstspender"></span> | Benutzung Betten: <span id="bett"></span> | Benutzung St&uuml;hle: <span id="stuhl"></span><button onclick="clearCookies();" class="statistik">Zur&uuml;cksetzten</button>
+    </div>
+    <div class="statistikbutton">
+      <button onclick="korrektCookies('bett');" class="">- 1 Bett</button><br>
+      <button onclick="korrektCookies('erstspender');" class="">- 1 Erstspender</button><br>
+      <button onclick="korrektCookies('stuhl');" class="">- 1 Stuhl</button><br>
+    </div>
+    <div class="print">
+      <div class="kopfzeile">
+        <svg height="60" width="220">
+          <polygon points="15,0 30,0 30,15 45,15 45,30 30,30 30,45 15,45 15,30 0,30 0,15 15,15" style="fill:#E60005" />
+          <text x="60" y="13" fill="black">Deutsches</text>
+          <text x="60" y="28" fill="black">Rotes</text>
+          <text x="60" y="43" fill="black">Kreuz</text>
+          Sorry, your browser does not support inline SVG.
+        </svg>
+        <span id="ortsverein">Ortsverein Schorndorf<br>Blutspende</span>
+      </div>
+      <h1>Auswertung der Blutspende vom <span id="printdatum"></span> in <span id="printort"></span></h1>
+      <br>
+      <h3>Auswertung des Ruheraums:</h3>
+      <table>
+        <tr>
+          <td><b>Spender</b></td>
+          <td><b><span id="printalle"></span> Spender</b></td>
+        </tr>
+        <tr>
+          <td>davon Erst-Spender</td>
+          <td><span id="printerst"></span> Spender</td>
+        </tr>
+        <tr>
+          <td>Nutzung der Betten</td>
+          <td><span id="printbett"></span> Spender</td>
+        </tr>
+        <tr>
+          <td>Nutzung der St&uuml;hle</td>
+          <td><span id="printstuhl"></span> Spender</td>
+        </tr>
+      </table>
+      <br>
+      <h3>Auswertung des Blutspendedienstes:</h3>
+      <table>
+        <tr>
+          <td><b>Spender</b></td>
+          <td><b><br>_______ Spender</b></td>
+        </tr>
+        <tr>
+          <td>davon Erst-Spender</td>
+          <td><br>_______ Spender</td>
+        </tr>
+        <tr>
+          <td>Zur&uuml;ckgestellte<br>Spenden</td>
+          <td><br>_______ Spenden</td>
+        </tr>
+        <tr>
+          <td>Verwertbare Spenden</td>
+          <td><br>_______ Spenden</td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</HTML>

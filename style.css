@@ -1,0 +1,114 @@
+html {
+  font-family: Arial;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+div.kopfzeile {
+  display: flex;
+  font-size: 20px;
+  border-bottom: 1px solid black;
+  padding: 3px;
+  margin-bottom: 5px;
+}
+div.kopfzeile > svg > text {
+  font-weight: bold;
+  font-size: 25px;
+}
+p.fertig {
+  display: none;
+}
+.timer {
+  height: 67.5px;
+  font-family: "Courier New";
+}
+div.bett {
+  border: 1px solid black;
+  width: 150px;
+  text-align: center;
+  height: 165px;
+  display: table-cell;
+}
+div.bett img {
+  width: 120px;
+  margin: auto;
+  display: none;
+}
+div.bett > h1 {
+  width: 100%;
+  font-size: 20px;
+  text-align: center;
+}
+button {
+  background: #c20001;
+  border: none;
+  width: 100px;
+  min-height: 25px;
+  margin: 5px auto 5px auto;
+}
+.platzhalter {
+  height: 67.5px;
+}
+p.timer.fertig ~ img {
+  display: block;
+}
+p.timer ~ button.aufstehen, p.fertig ~ button.standard, p.fertig ~ button.abbrechen, p.timer.start ~ button.aufstehen, p.timer.start ~ button.abbrechen {
+  display: none;
+}
+p.timer ~ button.standard {
+  display: none;
+}
+p.timer.start ~ button.standard, p.timer.fertig ~ button.aufstehen {
+  display: inline;
+}
+div.ruheraum {
+  padding: 5px;
+  margin-bottom: 20px;
+}
+.statistik {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: lightgrey;
+  padding: 3px;
+  font-size: 12px;
+}
+div.bettenbereich {
+  display: table-row;
+}
+div.stuhl {
+  border: 1px solid black;
+  width: 120px;
+  text-align: center;
+  height: 130px;
+}
+div.stuhl img {
+  width: 120px;
+  margin: auto;
+  display: none;
+}
+div.stuhl > h1 {
+  width: 100%;
+  font-size: 20px;
+  text-align: center;
+}
+button.statistik {
+  border:none;
+  background:none;
+  text-align:left;
+  line-height: 12px;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  margin: auto 0 auto auto;
+}
+.print {
+  display: none;
+}
+.statistikbutton {
+  position: absolute;
+  top: 300px;
+  right: 20px;
+}

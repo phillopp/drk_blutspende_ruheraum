@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+@page {
+  size: A4;
+  margin: 1.5cm 2cm 2cm 2.2cm;
+}
+.ruheraum, body > .kopfzeile, .statistik, div.statistikbutton, button {
+  display: none;
+}
+html {
+  font-family: Arial;
+  font-size: 12pt;
+}
+.kopfzeile {
+  display: flex;
+  font-size: 10pt;
+  /*border-bottom: 1px solid black;*/
+  padding: 3px;
+  margin-bottom: 5px;
+  top: 0;
+  width: 100%;
+}
+div.kopfzeile > svg > text {
+  font-weight: bold;
+  font-size: 15px;
+}
+h1 {
+  font-size: 16pt;
+}
+table {
+  border-collapse: collapse;
+}
+table, th, td {
+  border: 1px solid black;
+  padding: 4px;
+}
