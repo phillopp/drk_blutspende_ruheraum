@@ -5,3 +5,4 @@ In der Datei 'blutspende.js' können Sie Ihren Ortsverein eintragen unter
 ```
 var ortsverein = "__NAMES IHRES ORTSVEREINS__";
 ```
+Sowie in der Datei 'index.html'!
